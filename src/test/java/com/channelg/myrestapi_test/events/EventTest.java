@@ -16,7 +16,6 @@ public class EventTest {
     }
 
     @Test
-
     public void javaBean() {
         //Given
         String name = "Event";
