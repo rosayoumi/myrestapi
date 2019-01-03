@@ -32,4 +32,3 @@ public class EventTest {
         assertThat(event.getDescription()).isEqualTo(description);
     }
 }
-
