@@ -29,7 +29,7 @@ public class Event {
     private EventStatus eventStatus = EventStatus.DREFT;
 
     public void update() {
-        //uupdate free
+        // Update free
         if (this.basePrice == 0 && this.maxPrice ==0) {
             this.free = true;
         } else {
