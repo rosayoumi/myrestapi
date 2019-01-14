@@ -3,7 +3,6 @@ package com.channelg.myrestapi_test.events;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Component

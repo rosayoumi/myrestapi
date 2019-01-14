@@ -1,4 +1,4 @@
-package com.channelg.myrestapi_test;
+package com.channelg.myrestapi_test.common;
 
 import org.springframework.boot.test.autoconfigure.restdocs.RestDocsMockMvcConfigurationCustomizer;
 import org.springframework.boot.test.context.TestConfiguration;

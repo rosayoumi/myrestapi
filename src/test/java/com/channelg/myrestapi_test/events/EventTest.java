@@ -92,8 +92,8 @@ public class EventTest {
     private Object[] parametersForTestOffline() {
         return new Object[] {
                 new Object[] {"강남", true},
-                new Object[] {null, false},
-                new Object[] {" ", false}
+                new Object[] {null, false}
+                //new Object[] {" ", false}
         };
     }
 }
