@@ -1,5 +1,6 @@
 package com.channelg.myrestapi_test.events;
 
+import com.channelg.myrestapi_test.common.BaseControllerTest;
 import com.channelg.myrestapi_test.common.RestDocConfiguration;
 import com.channelg.myrestapi_test.common.TestDescription;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -38,26 +39,10 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 
-@RunWith(SpringRunner.class)
-//@WebMvcTest
-@SpringBootTest
-@AutoConfigureMockMvc
-@AutoConfigureRestDocs
-@Import(RestDocConfiguration.class)
-@ActiveProfiles("test")
-public class EventControllerTests {
-
-    @Autowired
-    MockMvc mockMvc;
-
-    @Autowired
-    ObjectMapper objectMapper;
+public class EventControllerTests extends BaseControllerTest {
 
     @Autowired
     EventReposirory eventReposirory;
-
-    @Autowired
-    ModelMapper modelMapper;
 
     //@MockBean
     //EventReposirory eventRepository;

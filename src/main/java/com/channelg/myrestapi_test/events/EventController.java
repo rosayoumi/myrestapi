@@ -1,7 +1,6 @@
 package com.channelg.myrestapi_test.events;
 
 import com.channelg.myrestapi_test.common.ErrorsResource;
-import lombok.var;
 import org.modelmapper.ModelMapper;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

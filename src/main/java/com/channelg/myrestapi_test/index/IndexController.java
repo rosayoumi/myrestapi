@@ -1,7 +1,6 @@
 package com.channelg.myrestapi_test.index;
 
 import com.channelg.myrestapi_test.events.EventController;
-import lombok.var;
 import org.springframework.hateoas.ResourceSupport;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

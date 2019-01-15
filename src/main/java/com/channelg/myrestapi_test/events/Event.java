@@ -1,5 +1,6 @@
 package com.channelg.myrestapi_test.events;
 
+import com.channelg.myrestapi_test.accounts.Account;
 import lombok.*;
 
 import javax.persistence.*;
@@ -27,6 +28,8 @@ public class Event {
     private boolean free;
     @Enumerated(EnumType.STRING)
     private EventStatus eventStatus = EventStatus.DREFT;
+    @ManyToOne
+    private Account manager;
 
     public void update() {
         // Update free
