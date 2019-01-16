@@ -1,6 +1,8 @@
 package com.channelg.myrestapi_test.events;
 
 import com.channelg.myrestapi_test.accounts.Account;
+import com.channelg.myrestapi_test.accounts.AccountSerializer;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import lombok.*;
 
 import javax.persistence.*;
@@ -29,6 +31,7 @@ public class Event {
     @Enumerated(EnumType.STRING)
     private EventStatus eventStatus = EventStatus.DREFT;
     @ManyToOne
+    @JsonSerialize(using = AccountSerializer.class)
     private Account manager;
 
     public void update() {

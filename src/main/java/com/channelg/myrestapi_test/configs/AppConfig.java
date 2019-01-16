@@ -1,6 +1,7 @@
 package com.channelg.myrestapi_test.configs;
 
 import com.channelg.myrestapi_test.accounts.Account;
+import com.channelg.myrestapi_test.accounts.AccountRepository;
 import com.channelg.myrestapi_test.accounts.AccountRole;
 import com.channelg.myrestapi_test.accounts.AccountService;
 import org.modelmapper.ModelMapper;
@@ -33,14 +34,25 @@ public class AppConfig {
             @Autowired
             AccountService accountService;
 
+            @Autowired
+            AppProperties appProperties;
+
             @Override
             public void run(ApplicationArguments args) throws Exception {
-                Account youmi = Account.builder()
-                        .email("youmi301@gmail.com")
-                        .password("youmi")
+
+                Account admin = Account.builder()
+                        .email(appProperties.getAdminUsername())
+                        .password(appProperties.getAdminPassword())
                         .roles(Set.of(AccountRole.ADMIN, AccountRole.USER))
                         .build();
-                accountService.saveAccount(youmi);
+                accountService.saveAccount(admin);
+
+                Account user = Account.builder()
+                        .email(appProperties.getUserUsername())
+                        .password(appProperties.getUserPassword())
+                        .roles(Set.of(AccountRole.USER))
+                        .build();
+                accountService.saveAccount(user);
             }
         };
     }
