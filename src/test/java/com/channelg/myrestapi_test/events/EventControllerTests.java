@@ -70,7 +70,6 @@ public class EventControllerTests extends BaseControllerTest {
                 .location("강남역 D2 스타트업 팩토리")
                 .build();
         //Mockito.when(eventRepository.save(event)).thenReturn(event);
-
         mockMvc.perform(post("/api/events")
                 .header(HttpHeaders.AUTHORIZATION, getBearerToken())
                 .contentType(MediaType.APPLICATION_JSON_UTF8)
